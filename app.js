@@ -1,19 +1,19 @@
 const express = require ('express');
-const mongoose = require( 'mongoose');
+//const mongoose = require( 'mongoose');
 const routes =require ('./routes/tvshows');
 const bodyParser = require('body-parser');
 
 
 const app = express();
 
-mongoose.connect('mongodb://localhost/tvshows', (err,res) =>{
+/*mongoose.connect('mongodb://localhost/tvshows', (err,res) =>{
    if(err){
       console.log('ERROR: connecting to Database. ' + err);
    }else{
       console.log('Connected to Database');
    }
 });
-
+*/
 //app.use(express.static(__dirname + '/public'));
 
 //req.params devuelve un objetos de los parametros(:nombre) enviados
