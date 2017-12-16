@@ -1,12 +1,11 @@
-const express = require ('express');
-const mongoose = require( 'mongoose');
-const routes =require ('./routes/tvshows');
-const bodyParser = require('body-parser');
-
+import express from 'express';
+import mongoose from 'mongoose';
+import routes from './routes/tvshows';
+import bodyParser from 'body-parser';
 
 const app = express();
 
-mongoose.connect('mongodb://localhost/tvshows', (err,res) =>{
+mongoose.connect('mongodb://localhost/tvshows', (err) =>{
    if(err){
       console.log('ERROR: connecting to Database. ' + err);
    }else{

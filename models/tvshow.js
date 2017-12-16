@@ -1,4 +1,4 @@
-const mongoose = require ('mongoose');
+import mongoose from 'mongoose';
 
 const Schema = mongoose.Schema;
 
@@ -14,4 +14,4 @@ const tvshowSchema = new Schema({
    summary: {type: String}
 });
 
-module.exports = mongoose.model('TVShow', tvshowSchema);
+export default mongoose.model('TVShow', tvshowSchema);
