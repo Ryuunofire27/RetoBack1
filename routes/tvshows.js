@@ -1,6 +1,6 @@
-import TVShow from '../models/tvshow';
+const TVShow = require ('../models/tvshow');
 
-export default app =>{
+module.exports = app =>{
    const findAllTVShows = (req,res)=>{
       TVShow.find((err, tvshows) =>{
          if(!err){

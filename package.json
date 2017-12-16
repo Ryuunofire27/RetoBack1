@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "babel-node --presets es2015 app.js"
+    "start": "node app.js"
   },
   "author": "Charlie",
   "license": "ISC",

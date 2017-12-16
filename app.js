@@ -1,9 +1,8 @@
-import express from 'express';
-import users from './resources/user';
-import mongoose from 'mongoose';
-import routes from './routes/tvshows';
-import bodyParser from 'body-parser';
-import methodOverride from 'method-override';
+const express = require ('express');
+const mongoose = require( 'mongoose');
+const routes =require ('./routes/tvshows');
+const bodyParser = require('body-parser');
+
 
 const app = express();
 
@@ -28,19 +27,6 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
 routes(app);
-
-app.get('/:id', (req,res)=>{
-   /*console.log(req.params);
-   res.send(req.params.id);*/
-   const id = req.params.id;
-   let nombre="no coincide con ningun id";
-   users.map(user=>{
-      console.log(user.id + " " + user.nombre);
-      if(user.id == id) nombre = user.nombre;
-   });
-   console.log(nombre);
-   res.send(nombre);
-});
 
 app.get('/', (req,res)=>{
    console.log(req.query);
