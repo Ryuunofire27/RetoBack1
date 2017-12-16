@@ -46,4 +46,4 @@ app.delete('/user', (req,res) =>{
 
 
 
-app.listen(80, console.log("abierto el puerto"));
+app.listen(3000, console.log("abierto el puerto"));
